@@ -25,7 +25,7 @@ public class PlayerHealth : MonoBehaviour
         GUI.Box(new Rect(10, 10, healthBarLength, 20), currentHealth + "/" + maxHealth);
     }
 
-    private void AdjustCurrentHealth(int adjustement)
+    public void AdjustCurrentHealth(int adjustement)
     {
         currentHealth = (currentHealth + adjustement).Bound(1, maxHealth);
 
