@@ -22,7 +22,7 @@ public class EnemyHealth : MonoBehaviour
 
     public void OnGUI()
     {
-        GUI.Box(new Rect(10, 10, healthBarLength, 20), currentHealth + "/" + maxHealth);
+        GUI.Box(new Rect(10, 40, healthBarLength, 20), currentHealth + "/" + maxHealth);
     }
 
     private void AdjustCurrentHealth(int adjustement)
