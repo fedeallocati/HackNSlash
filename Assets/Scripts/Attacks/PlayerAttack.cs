@@ -5,6 +5,7 @@ public class PlayerAttack : MeleeAttackWithCooldown
     // Use this for initialization
     public void Start()
     {
+        maxDistance = 2.5f;
         attackTimer = 0;
         coolDown = 2.0f;
     }
