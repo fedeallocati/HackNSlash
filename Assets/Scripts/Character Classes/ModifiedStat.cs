@@ -16,6 +16,12 @@ public class ModifiedStat : BaseStat
     {
         public Attribute attribute;
         public float ratio;
+
+        public ModifyingAttribute(Attribute att, float rat)
+        {
+            attribute = att;
+            ratio = rat;
+        }
     }
 
     public override int AdjustedBaseValue
