@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Targetting : MonoBehaviour
 {
+    private PlayerAttack playerAttack;
     public List<Transform> targets;
     private List<Transform>.Enumerator targetsEnumerator;
     public Transform selectedTarget;
@@ -13,8 +14,9 @@ public class Targetting : MonoBehaviour
 
     // Use this for initialization
     public void Start ()
-	{
-	    targets = GameObject.FindGameObjectsWithTag("Enemy").Select(enemy => enemy.transform).ToList();
+    {
+        playerAttack = GetComponent<PlayerAttack>();
+        targets = GameObject.FindGameObjectsWithTag("Enemy").Select(enemy => enemy.transform).ToList();
         targetsEnumerator = targets.GetEnumerator();
         selectedTarget = null;
 
@@ -33,6 +35,11 @@ public class Targetting : MonoBehaviour
             targets.Sort((t1, t2) => DistanceTo(t1).CompareTo(DistanceTo(t2)));
             targetsEnumerator = targets.GetEnumerator();
         }
+        else
+        {
+            DeselectTarget();
+        }
+
 
         if (!targetsEnumerator.MoveNext())
         {
@@ -47,6 +54,17 @@ public class Targetting : MonoBehaviour
     {
         selectedTarget = target;
         selectedTarget.GetComponent<Renderer>().material.color = Color.red;
+        playerAttack.target = selectedTarget.gameObject;
+    }
+
+    private void DeselectTarget()
+    {
+        if (selectedTarget != null)
+        {
+            playerAttack.target = null;
+            selectedTarget.GetComponent<Renderer>().material.color = Color.blue;
+            selectedTarget = null;
+        }
     }
 
     // Update is called once per frame

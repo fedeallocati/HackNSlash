@@ -133,7 +133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1586301890}
-  moveSpeed: 1
+  moveSpeed: 0
   rotationSpeed: 1
   maxDistance: 0
 --- !u!114 &598123657
@@ -299,7 +299,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1586301890}
-  moveSpeed: 1
+  moveSpeed: 0
   rotationSpeed: 1
   maxDistance: 0
 --- !u!114 &924644650
@@ -379,7 +379,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1586301890}
-  moveSpeed: 1
+  moveSpeed: 0
   rotationSpeed: 1
   maxDistance: 0
 --- !u!114 &1328760646
@@ -503,6 +503,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targets: []
+  selectedTarget: {fileID: 0}
 --- !u!1 &1780661491
 GameObject:
   m_ObjectHideFlags: 0
