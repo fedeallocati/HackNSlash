@@ -82,25 +82,25 @@ public class BaseCharacter : MonoBehaviour
 
     private void SetupPrimaryAttributes()
     {
-        for (int cnt = 0; cnt < primaryAttributes.Length; cnt++)
+        for (int i = 0; i < primaryAttributes.Length; i++)
         {
-            primaryAttributes[cnt] = new Attribute();
+            primaryAttributes[i] = new Attribute();
         }
     }
 
     private void SetupVitals()
     {
-        for (int cnt = 0; cnt < vitals.Length; cnt++)
+        for (int i = 0; i < vitals.Length; i++)
         {
-            vitals[cnt] = new Vital();
+            vitals[i] = new Vital();
         }
     }
 
     private void SetupSkills()
     {
-        for (int cnt = 0; cnt < skills.Length; cnt++)
+        for (int i = 0; i < skills.Length; i++)
         {
-            skills[cnt] = new Skill();
+            skills[i] = new Skill();
         }
     }
 

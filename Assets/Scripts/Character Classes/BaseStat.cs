@@ -11,10 +11,10 @@ public class BaseStat
         ExpToLevel = 100;
     }
 
-    public int BaseValue { get; protected set; }
-    public int BuffValue { get; protected set; }
-    public int ExpToLevel { get; protected set; }
-    public float LevelModifier { get; protected set; }
+    public int BaseValue { get; set; }
+    public int BuffValue { get; set; }
+    public int ExpToLevel { get; set; }
+    public float LevelModifier { get; set; }
 
     private int CalculateExpToLevel()
     {
